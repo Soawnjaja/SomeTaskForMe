@@ -19,12 +19,37 @@
 </script>
 
 <main>
-<input type="text" bind:value={currencyFrom} placeholder="Введите валюту откуда" on:input={convertCurrency} />
-<input type="text" bind:value={currencyTo} placeholder="Введите валюту куда" on:input={convertCurrency} />
-<input type="number" bind:value={amountFrom} on:input={convertCurrency} placeholder="Сумма откуда" />
-<input type="number" bind:value={amountTo} placeholder="Сумма куда" readonly />
+  <div class="app-title">Мини приложение для просмотра курса валют</div>
+
+  <div class="input-group">
+   <input type="text" bind:value={currencyFrom} placeholder="Введите исходную валюту" on:input={convertCurrency} />
+   <input type="text" bind:value={currencyTo} placeholder="Введите на какую валюту хотите поменять" on:input={convertCurrency} />
+   <input type="number" bind:value={amountFrom} on:input={convertCurrency} placeholder="Количесто единиц валюты " />
+   <input type="number" bind:value={amountTo} placeholder="Стоимость валюты" readonly />
+  </div>
 </main>
 
 <style>
+ .app-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+ }
 
+ .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+ }
+
+ .input-group input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ }
+
+ .input-group input[readonly] {
+    background-color: #f0f0f0;
+ }
 </style>
