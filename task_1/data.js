@@ -72,7 +72,7 @@ export const encoded = [
     mediaId: "676",
     resellingId: "18842",
     serviceTypeId: "124",
-    formatTypeId: "0",
+    formatTypeId: "0", 
     formatId: "0",
     unitId: "82226",
     platformId: "0",
